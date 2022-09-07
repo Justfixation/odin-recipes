@@ -6,5 +6,5 @@ At the end of this project I should be able to demonstrate skills including:
 - Setting up links properly
 - Setting up images properly
 - Demonstrating an understanding of various html tags, and some of their attributes, namely:
-	- <p> along with <strong> and <em>, <img> with attributes "src" and "alt", and <a> along with the "href" attribute.
+	- &lt;p&gt; along with &lt;strong&gt; and &lt;em&gt; tags, &lt;img&gt; tags with attributes <strong>src</strong>; and <strong>alt</strong>, and finally &lt;a&gt; tags along with the <strong>href</strong> attribute.
 
