@@ -3,9 +3,13 @@ img {
   height: auto;
 }
 
-/* For some reason, making this ONLY the universal selector to give everything a default font/backgrond colortakes priority over ONLY the background element for .inverse-blue files. I thought the more complex ".inverse-blue *" descendant combinator would win out over a standalone universal selector , but I guess not.
+/*
+Making this ONLY the universal selector to give everything a default font/backgrond color takes priority over ONLY the background element for .inverse-blue files.
+I thought the more complex ".inverse-blue *" descendant combinator would win out over a standalone universal selector, but I guess not.
 
-Making this a descendat combinator with everything under the <body> element ignores the body element itself, but making this a descendant combinator with everything under <html> applying (despite appearing to serve the same funtion,) makes both regular and .inverse-blue pages function properly. I have no idea why... */
+Making this a descendat combinator with everything under the <body> element ignores the body element itself. 
+Making this a descendant combinator with everything under <html> makes both pages function properly.
+Both methods appear to serve the same function. I have no idea why it works this way. */
 html * {
   font-family: Arial, Georgia;
   background-color: rgb(255, 254, 203);
@@ -25,9 +29,13 @@ h1 {
 h2,
 h3,
 .blue {
-  /* #54A3B2 is a softer blue, but with slightly less visibility unless it is bold. */
+  /*
+  #54A3B2 is a softer blue, but with slightly less visibility if it isn't bold.
+ */
   color: #5A72A5;
-  /* Looks like there is no in-between. 501 is bold, anything less is not. */
+  /*
+  Looks like there is no in-between. 501 is bold, anything less is not.
+  */
   font-weight: 501;
 }
 
@@ -35,21 +43,32 @@ p {
   text-indent: 25px;
 }
 
-/*Even better than th eoriginal plan to make a descendant combinator for EVERY possible element nested under .inverse-blue, the universal selector just includes everything to apply the correct styling if the html tag itself is the ancestor with .inverse-blue! */
+/*
+The universal selector includes everything if the html tag itself is the ancestor with .inverse-blue.
+No need for many selectors per declaration!
+*/
 .inverse-blue *{
   background-color: #54A3B2;
   color: rgb(255, 254, 168);
 }
 
-/* I needed two sections to make .primary-purple headers a different color than the rest of the text. I gave one of them the .blue class to test out classes before, so I kept it in for the sake of preservation. */
+/*
+I needed two sections to make .primary-purple headers a different color than the rest of the text.
+I also gave one of them the .blue class to test out classes earlier, so I decided to keep it.
+*/
 .primary-purple *{
   background-color: #B44D89;
   color: white;
 }
 
-/* It may have been more efficient to create a separate primary-purple.css stylesheet if I was going to have different stylings altogether. I did it for the sake of only needing to update one css document for any style change, but it may be more of a headache down the line...
+/*
+It may have been more efficient to create a separate primary-purple.css stylesheet if I was going to have different stylings.
+I did it for the sake of only needing to update one css document for any style change.
+It may be more of a headache down the line.
 
-I'm unable to change individual lines on html files that are using .inverse-blue or .primary-purple without utilizing inline styling to override the class, since it applies to the whole document with the way I have it set up. */
+I'm unable to change individual lines on .inverse-blue or .primary-purple files without utilizing inline styling to override the class.
+The class selector applies to the whole document with the way I have it set up.
+*/
 .primary-purple h1,
 .primary-purple h2,
 .primary-purple h3,
