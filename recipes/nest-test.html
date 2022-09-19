@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- Attempting to make the whole document fall under .inverse-blue" -->
+<html lang="en" class="inverse-blue">
+  <head>
+    <meta charset="UTF-8">
+    <title>Nest Test</title>
+    <link rel="stylesheet" href="../style.css">
+  </head>
+
+  <body>
+    <!-- adding a class to the html tag works, but only the specified descendent combinators apply (resulting in sections of the correct style). Best to include a cass in the html tag for the stylesheet with descendant combinators of all relevant tags - preventing the need for a bunch of smaller tags. -->
+    <h1>Nest Test<h1>
+    <h2>This is not directly nested under .inverse-blue.</h2>
+    <h3>It should have yellow text with a blue background</h4>
+    <h4>This line should do the same.</h4>
+    <p>This line, too, has a &lt;body&gt; element between it and the ancestor and should be using the .inverse-blue color scheme.</p>
+    <p style="color: #0B96C4; text-decoration: underline;">This line should be blue, like in index.html. I gave it inline styling specifically so it applies the original style (I couldn't get class selectors to override .inverse-blue using CSS Cascade).<p>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+img {
+  width: 550px;
+  height: auto;
+}
+
+/* For some reason, making this ONLY the universal selector to give everything a default font/backgrond colortakes priority over ONLY the background element for .inverse-blue files. I thought the more complex ".inverse-blue *" descendant combinator would win out over a standalone universal selector , but I guess not.
+
+Making this a descendat combinator with everything under the <body> element ignores the body element itself, but making this a descendant combinator with everything under <html> applying (despite appearing to serve the same funtion,) makes both regular and .inverse-blue pages function properly. I have no idea why... */
+html * {
+  font-family: Arial, Georgia;
+  background-color: rgb(255, 254, 203);
+}
+
+a {
+  color: #0B96C4;
+  text-decoration: underline;
+}
+
+h1 {
+  color: black;
+  font-weight: 700;
+  font-family: Serif, Helvetica, "Lucida Console", "Brush Script MT", Georgia, "Times New Roman";
+}
+
+h2,
+h3,
+.blue {
+  /* #54A3B2 is a softer blue, but with slightly less visibility unless it is bold. */
+  color: #5A72A5;
+  /* Looks like there is no in-between. 501 is bold, anything less is not. */
+  font-weight: 501;
+}
+
+p {
+  text-indent: 25px;
+}
+
+/*Even better than th eoriginal plan to make a descendant combinator for EVERY possible element nested under .inverse-blue, the universal selector just includes everything to apply the correct styling if the html tag itself is the ancestor with .inverse-blue! */
+.inverse-blue *{
+  background-color: #54A3B2;
+  color: rgb(255, 254, 168);
+}
+
+/* I needed two sections to make .primary-purple headers a different color than the rest of the text. I gave one of them the .blue class to test out classes before, so I kept it in for the sake of preservation. */
+.primary-purple *{
+  background-color: #B44D89;
+  color: white;
+}
+
+/* It may have been more efficient to create a separate primary-purple.css stylesheet if I was going to have different stylings altogether. I did it for the sake of only needing to update one css document for any style change, but it may be more of a headache down the line...
+
+I'm unable to change individual lines on html files that are using .inverse-blue or .primary-purple without utilizing inline styling to override the class, since it applies to the whole document with the way I have it set up. */
+.primary-purple h1,
+.primary-purple h2,
+.primary-purple h3,
+.primary-purple h4,
+.primary-purple h5,
+.primary-purple h6,
+.primary-purple .blue {
+  color: #490040;
+  font-weight: 501;
+}
