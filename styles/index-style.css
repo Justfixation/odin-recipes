@@ -1,0 +1,42 @@
+img {
+  width: 550px;
+  height: auto;
+}
+
+* {
+  font-family: Arial, Georgia;
+  background-color: rgb(255, 254, 203);
+}
+
+/*
+a {
+  color: #0B96C4;
+  text-decoration: underline;
+}
+*/
+
+h1 {
+  color: black;
+  font-weight: 700;
+  font-family: Serif, Helvetica, "Lucida Console", "Brush Script MT", Georgia, "Times New Roman";
+}
+
+.blue {
+  /*
+  #54A3B2 is a softer blue, but with slightly less visibility if it isn't bold.
+ */
+  color: #5A72A5;
+  /*
+  501 is bold, anything less is not.
+  No in-between.
+  */
+  font-weight: 501;
+}
+
+.purple {
+  color: #9A288C;
+}
+
+p {
+  text-indent: 25px;
+}

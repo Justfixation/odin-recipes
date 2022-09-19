@@ -1,0 +1,35 @@
+img {
+  width: 550px;
+  height: auto;
+}
+
+*{
+  /*
+  #54A3B2 a brighter blue.
+  */
+  background-color: #5A72A5;
+  color: rgb(255, 254, 168);
+  font-family: Arial, Georgia;
+}
+
+p {
+  text-indent: 25px;
+}
+
+h1 {
+  font-weight: 700;
+  font-family: Serif, Helvetica, "Lucida Console", "Brush Script MT", Georgia, "Times New Roman";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /*
+  #5A72A5is a much softer blue.
+  */
+  color: #1E095C;
+  font-weight: 501;
+}

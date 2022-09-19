@@ -1,0 +1,33 @@
+img {
+  width: 550px;
+  height: auto;
+}
+
+*{
+  /*
+  #BA3FAB is a more vibrant purple, but feels too bright.
+  */
+  background-color: #B44D89;
+  color: rgb(255, 254, 168);
+  font-family: Arial, Georgia;
+}
+
+h1{
+  font-weight: 700;
+  font-family: Serif, Helvetica, "Lucida Console", "Brush Script MT", Georgia, "Times New Roman";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #490040;
+  font-weight: 501;
+}
+
+p {
+  text-indent: 25px;
+}
+
