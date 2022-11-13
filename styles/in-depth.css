@@ -1,12 +1,25 @@
-img {
-  width: 550px;
-  height: auto;
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: -2vw;
+}
+.img img {
+  height: 25vw;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 *{
-  /*
-  #BA3FAB is a more vibrant purple, but feels too bright.
-  */
   background-color: #B44D89;
   color: rgb(255, 254, 168);
   font-family: Arial, Georgia;
@@ -15,6 +28,7 @@ img {
 h1{
   font-weight: 700;
   font-family: Serif, Helvetica, "Lucida Console", "Brush Script MT", Georgia, "Times New Roman";
+  text-align: center;
 }
 
 h1,
@@ -28,6 +42,9 @@ h6 {
 }
 
 p {
-  text-indent: 25px;
+  text-indent: 1.5vw;
 }
 
+h4 {
+  text-align: center;
+}

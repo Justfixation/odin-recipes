@@ -1,6 +1,18 @@
-img {
-  width: 550px;
-  height: auto;
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.img {
+ display: flex;
+ justify-content: center; 
+}
+
+.img img {
+  width: 50vw;
 }
 
 * {
@@ -8,23 +20,20 @@ img {
   background-color: rgb(255, 254, 203);
 }
 
-/*
 a {
-  color: #0B96C4;
-  text-decoration: underline;
+  display: block;
+  margin: 1.5vw;
+  margin-left: 0;
 }
-*/
 
 h1 {
   color: black;
   font-weight: 700;
   font-family: Serif, Helvetica, "Lucida Console", "Brush Script MT", Georgia, "Times New Roman";
+  text-align: center;
 }
 
 .blue {
-  /*
-  #54A3B2 is a softer blue, but with slightly less visibility if it isn't bold.
- */
   color: #5A72A5;
   /*
   501 is bold, anything less is not.
