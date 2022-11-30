@@ -7,30 +7,36 @@ html {
 }
 
 * {
-  font-family: Arial, Georgia;
+  font-family: Arial, Georgia; 
+}
+
+body {
   background-color: rgb(255, 254, 203);
+  display: flex;
+  flex-direction: column;
 }
 
-.img {
- display: flex;
- justify-content: center; 
+.header {
+  display: flex;
+  justify-content: center;
 }
 
-.img img {
-  width: 50vw;
-}
-
-a {
-  display: block;
-  margin: 1.5vw;
-  margin-left: 0;
-}
-
-h1 {
+.header h1 {
   color: black;
   font-weight: 550;
   font-family: Serif, Helvetica, "Lucida Console", "Brush Script MT", Georgia, "Times New Roman";
-  text-align: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  margin: 0 16px;
+  min-width: 100px;
 }
 
 .blue {
@@ -39,4 +45,36 @@ h1 {
 
 .purple {
   color: #9A288C;
+}
+
+a {
+ color: inherit;
+ margin-bottom: 15px;
+}
+
+.in-depth {
+  display: flex;
+  flex-direction: column;
+}
+
+.simple {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.img {
+  display: flex;
+  order: 1;
+  align-items: flex-start;
+  margin-right: 50px;
+}
+
+.img img {
+    object-fit: contain;
+    object-position: top left;
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+    min-width: 300px;
 }

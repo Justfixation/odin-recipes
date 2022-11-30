@@ -6,31 +6,65 @@ html {
   box-sizing: inherit;
 }
 
-img {
-  height: 25vw;
-  width: auto;
+body {
   display: flex;
-}
-
-.img img {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-*{
+  flex-direction: column;
   background-color: #5A72A5;
   color: rgb(255, 254, 168);
   font-family: Arial, Georgia;
 }
 
-p {
-  text-indent: 1.5vw;
+.header {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+  font-family: Serif, Helvetica, "Lucida Console", "Brush Script MT", Georgia, "Times New Roman";
 }
 
-h1 {
-  font-weight: 550;
-  font-family: Serif, Helvetica, "Lucida Console", "Brush Script MT", Georgia, "Times New Roman";
-  text-align: center;
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ingredients {
+  width: 350px;
+  min-width: 200px;
+  /* Either set the left margin to a vw width, or enable flex wrap
+  on the container */
+  margin: 0 10px;
+  flex: 0 1 auto;
+  word-wrap: wrap;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.img {
+  display: flex;
+  order: 1;
+  flex: 0 1 auto;
+  align-items: flex-start;
+  margin: 0 10px;
+  
+}
+
+/* Code below makes the photo keep original dimensions, but be able to
+grow or shrink to specified sizes. It will spill over if the screen is
+too small. */ 
+.img img {
+  object-fit: scale-down;
+  object-position: top left;
+  width: 100%;
+  height: 100%;
+  max-height: 350px;
+  /* if min-height is used with max-height, min will be ignored. */
+  min-width: 350px;
+}
+
+p {
+  text-indent: 1.5vw;
 }
 
 h1,
